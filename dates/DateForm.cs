@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace dates
@@ -19,7 +12,8 @@ namespace dates
 
         private void DateForm_Load(object sender, EventArgs e)
         {
-
+            Date dateClass = new Date(1, 1, 2000);
+            dateBox.Text = dateClass.ToString();
         }
     }
 }
