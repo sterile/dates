@@ -15,6 +15,13 @@
             MAX_DAY = 31,   // Maximum day permitted
             MAX_MONTH = 12; // Maximum month permitted
 
+        public Date(int month, int day, int year)
+        {
+            Month = month;
+            Day = day;
+            Year = year;
+        }
+
         public int Month
         {
             get
