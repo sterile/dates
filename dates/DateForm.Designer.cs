@@ -49,6 +49,7 @@
             this.monthButton.TabIndex = 0;
             this.monthButton.Text = "Update Month";
             this.monthButton.UseVisualStyleBackColor = true;
+            this.monthButton.Click += new System.EventHandler(this.monthButton_Click);
             // 
             // dayButton
             // 
@@ -58,6 +59,7 @@
             this.dayButton.TabIndex = 1;
             this.dayButton.Text = "Update Day";
             this.dayButton.UseVisualStyleBackColor = true;
+            this.dayButton.Click += new System.EventHandler(this.dayButton_Click);
             // 
             // yearButton
             // 
@@ -67,6 +69,7 @@
             this.yearButton.TabIndex = 2;
             this.yearButton.Text = "Update Year";
             this.yearButton.UseVisualStyleBackColor = true;
+            this.yearButton.Click += new System.EventHandler(this.yearButton_Click);
             // 
             // monthBox
             // 
