@@ -129,6 +129,7 @@
             // 
             this.dateBox.Location = new System.Drawing.Point(82, 12);
             this.dateBox.Name = "dateBox";
+            this.dateBox.ReadOnly = true;
             this.dateBox.Size = new System.Drawing.Size(100, 20);
             this.dateBox.TabIndex = 10;
             // 
