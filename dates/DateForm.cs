@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace dates
 {
-    public partial class Form1 : Form
+    public partial class DateForm : Form
     {
-        public Form1()
+        public DateForm()
         {
             InitializeComponent();
+        }
+
+        private void DateForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
