@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * Grading ID: M5477
+ * Lab: 9
+ * Due Date: April 21 2019
+ * Course Section: 01
+ * Description: A simple demonstration of using an external class
+ */
+
+using System;
 using System.Windows.Forms;
 
 namespace dates
@@ -12,47 +20,66 @@ namespace dates
             InitializeComponent();
         }
 
-        private void UpdateDate()
+        private void DateForm_Load(object sender, EventArgs e)
         {
             dateBox.Text = dateClass.ToString();
         }
 
-        private void ChangeDate(TextBox input, int change)
+        private void monthButton_Click(object sender, EventArgs e)
         {
-            int update;
             bool validInput;
+            int month;
 
-            validInput = int.TryParse(input.Text, out update);
+            validInput = int.TryParse(monthBox.Text, out month);
 
             if (validInput)
             {
-                change = update;
-                UpdateDate();
+                dateClass.Month = month;
+                monthBox.Text = null;
+                dateBox.Text = dateClass.ToString();
             }
             else
             {
-                MessageBox.Show("Please input integers only!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please update your input to contain whole numbers only.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void DateForm_Load(object sender, EventArgs e)
-        {
-            UpdateDate();
-        }
-
-        private void monthButton_Click(object sender, EventArgs e)
-        {
-            ChangeDate(monthBox, dateClass.Month);
         }
 
         private void dayButton_Click(object sender, EventArgs e)
         {
-            ChangeDate(dayBox, dateClass.Day);
+            bool validInput;
+            int day;
+
+            validInput = int.TryParse(dayBox.Text, out day);
+
+            if (validInput)
+            {
+                dateClass.Day = day;
+                dayBox.Text = null;
+                dateBox.Text = dateClass.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Please update your input to contain whole numbers only.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void yearButton_Click(object sender, EventArgs e)
         {
-            ChangeDate(yearBox, dateClass.Year);
+            bool validInput;
+            int year;
+
+            validInput = int.TryParse(yearBox.Text, out year);
+
+            if (validInput)
+            {
+                dateClass.Year = year;
+                yearBox.Text = null;
+                dateBox.Text = dateClass.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Please update your input to contain whole numbers only.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
