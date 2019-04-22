@@ -1,4 +1,12 @@
-﻿namespace dates
+﻿/*
+ * Grading ID: M5477
+ * Lab: 9
+ * Due Date: April 21 2019
+ * Course Section: 01
+ * Description: Handle day class operations
+ */
+
+namespace dates
 {
     public class Date
     {
