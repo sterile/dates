@@ -79,6 +79,11 @@
             }
         }
 
+        /*
+         * Precondition: None
+         * Postcondition: Returns date in American layout
+         */
+
         public override string ToString()
         {
             string dateText = $"{_month:D2}/{_day:D2}/{_year:D4}";
